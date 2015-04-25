@@ -59,7 +59,7 @@ gulp.task('server', ['index'], function() {
     connect.server({ 
         livereload: { port: 12345 }, 
         port: PORT, 
-        root: 'dist', 
+        root: ['dist', '.'], 
         middleware: function(c, opt) {
             return [
                // c.proto.use('bower_components', serveStatic('bower_components'))
